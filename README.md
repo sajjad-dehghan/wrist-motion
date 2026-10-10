@@ -1,46 +1,118 @@
-# Apple Watch SE 3 reference recreation
+<p align="center">
+  <img src="docs/media/watches-in-motion.gif" width="1000" alt="Five Apple Watch SE 3 models rotating into a colorful product composition. Animated preview." />
+</p>
 
-بازسازی قابل اجرا از نمونهٔ ارسالی Refero. نسخهٔ تحویل، سایت استاتیک کامل با HTML، CSS و JavaScript است؛ به نصب وابستگی یا مرحلهٔ build نیاز ندارد.
+<p align="center">
+  <img src="docs/media/wordmark.svg" width="1000" alt="WristMotion — a watch experience in two directions" />
+</p>
 
-## اجرا
+<p align="center">
+  <strong>A bilingual product-page reconstruction, with Persian at its heart.</strong><br />
+  Apple Watch SE 3 · Responsive motion · Pinar typography · Persian RTL / English LTR
+</p>
 
-```powershell
-cd D:\Projects\Apple\site
+<p align="center">
+  <a href="docs/README.fa.md">فارسی</a> ·
+  <a href="#the-experience">Explore the work</a> ·
+  <a href="#run-locally">Run locally</a> ·
+  <a href="QA.md">Verification notes</a> ·
+  <a href="SOURCES.md">Source credits</a>
+</p>
+
+---
+
+## The experience
+
+WristMotion is a visual implementation study by [Sajjad Dehghan](https://github.com/sajjad-dehghan). It reconstructs an Apple Watch SE 3 reference and extends it into a Persian-first experience: conversational copy, local Pinar fonts, readable RTL layouts, and motion that stays aligned with the product.
+
+The opening animation is a looping GIF of the retained hero film. The screenshots below come from the running implementation.
+
+### Persian, by default
+
+![Persian desktop experience with Pinar typography and the five-watch hero](docs/media/desktop-persian.jpg)
+
+### The same product, another direction
+
+![English desktop experience with the original LTR composition](docs/media/desktop-english.jpg)
+
+<table>
+  <tr>
+    <td align="center"><strong>Made for small screens</strong></td>
+    <td align="center"><strong>Direction-aware motion</strong></td>
+  </tr>
+  <tr>
+    <td align="center" width="32%"><img src="docs/media/mobile-persian.jpg" width="280" alt="Persian mobile hero with compact navigation and Pinar typography" /></td>
+    <td align="center" width="68%"><img src="docs/media/battery-rtl.jpg" width="700" alt="Charging cable entering from the right, behind the watch and clear of Persian copy" /></td>
+  </tr>
+</table>
+
+### Explore the product
+
+![Interactive watch details with Persian controls for finishes, sensors, glass and accessories](docs/media/product-details.jpg)
+
+## What I worked on
+
+- **Reference reconstruction.** Restored the older five-watch hero film, recreated its desktop proportions, gradient headline, pricing pill and playback controls.
+- **Persian localization.** Authored 618 source-string translations or brand-name exceptions, including marketing copy, accessible labels and dynamic component text.
+- **Typography and direction.** Added four local Pinar weights, Persian digits, RTL navigation and captions, while retaining English typography and LTR flow.
+- **Motion details.** Corrected the RTL charger entry, mirrored the accessory without mirroring the watch face, and aligned image layers at mobile sizes.
+- **Responsive delivery.** Packaged media locally, preserved the original galleries and product-detail components, and verified the implementation in the browser.
+
+Apple's imagery, film and native component scripts are retained and adapted. My contribution is the reconstruction, localization, custom hero controls, directional styling and integration—not the creation of the original product assets.
+
+## Interaction highlights
+
+| Detail | Behavior |
+| --- | --- |
+| Hero film | Responsive media, play/pause, visibility-aware playback and reduced-motion support |
+| Language control | Persian ↔ English; preserves query parameters and section fragments |
+| Product exploration | Detail panels, finish selection and localized labels |
+| Highlights | Selectable feature panels and native RTL gallery scrolling |
+| Charging section | Cable enters from the right in Persian, clear of the copy |
+
+## Run locally
+
+**Node.js 20+** serves the committed site. No dependency installation or frontend build is needed.
+
+```bash
+git clone https://github.com/sajjad-dehghan/wrist-motion.git
+cd wrist-motion
 npm run dev
 ```
 
-پیش‌نمایش: http://127.0.0.1:4173/
+Open **http://127.0.0.1:4173/**.
 
-فارسی زبان پیش‌فرض است. نسخهٔ انگلیسی در `http://127.0.0.1:4173/en/` قرار دارد؛ دکمهٔ انتخاب زبان در بالای صفحه بین دو نسخه جابه‌جا می‌شود. متن فارسی با لحن خودمونی، فونت محلی پینار، اعداد فارسی و چیدمان راست‌به‌چپ ارائه می‌شود. بخش متن‌های ریز و پاورقی‌های پایین صفحه و علامت‌های ارجاع آن، طبق درخواست کاربر از هر دو نسخه حذف شده‌اند.
+| Route | Experience |
+| --- | --- |
+| `/` | Persian default, RTL, Pinar |
+| `/en/` | English, LTR, SF Pro |
+| `/?reference=1` | A paused hero frame for visual review; Play still works |
 
-```powershell
+```bash
 npm run check
 ```
 
-## ساختار
+The check verifies local resources, responsive video variants, locales, fonts and hosting configuration. Browser review covered desktop, tablet and mobile; see [QA.md](QA.md) for evidence and limits.
 
-- `dist/index.html`: صفحهٔ فارسی پیش‌فرض، از قبل ترجمه‌شده و بدون نیاز به JavaScript برای فارسی شدن.
-- `dist/en/index.html`: نسخهٔ انگلیسی با چیدمان اصلی.
-- `dist/assets/localization.css`: پینار، تنظیمات RTL و انتخاب زبان.
-- `dist/assets/localization.js`: ترجمهٔ برچسب‌هایی که اجزای اصلی بعداً ایجاد می‌کنند.
-- `dist/assets/pinar/`: پینار DS4 در چهار وزن، همراه منشأ فایل‌ها.
-- `src/english.html`: سورس حفظ‌شدهٔ انگلیسی.
-- `src/fa-copy.txt`: ترجمهٔ قابل ویرایش ۶۱۸ عبارت؛ شماره‌ها به `src/text-inventory.json` ارجاع دارند.
-- `scripts/localize.py`: تولید مجدد دو صفحه پس از ویرایش ترجمه؛ با Python 3 و کتابخانهٔ lxml اجرا می‌شود. اجرای سایت به آن نیاز ندارد.
-- `dist/assets/recreation.css`: چیدمان و تنظیمات هیروی مرجع.
-- `dist/assets/recreation.js`: پخش/توقف، رسانهٔ متناسب با اندازهٔ صفحه و کاهش حرکت.
-- `dist/assets/hero-*.mp4`: ویدئوهای اصلی نسخهٔ قدیمی در سه اندازه.
-- `dist/v/`, `dist/ac/`, `dist/api-www/`: تصاویر، سبک‌ها و اجزای تعاملی اصلی.
-- `dist/wss/fonts/`: فونت‌های SF Pro به‌صورت محلی.
-- `scripts/serve.mjs`: پیش‌نمایش محلی با پشتیبانی درخواست‌های Range برای ویدئو.
-- `.openai/hosting.json`: تنظیمات سایت خصوصی و پوشهٔ انتشار.
+## Under the hood
 
-برای مقایسهٔ ثابت هیرو با مرجع، `/?reference=1` فریم ۲٫۸ ثانیه را متوقف می‌کند. نسخهٔ عادی، ویدئو را پخش می‌کند. دکمهٔ پخش در هر دو حالت قابل استفاده است.
+```text
+dist/                     Ready-to-serve website and local assets
+  index.html              Persian default
+  en/index.html           English version
+  assets/recreation.*     Custom hero layout and playback
+  assets/localization.*   Pinar, RTL styling and dynamic labels
+src/                      Retained English source and editable Persian copy
+scripts/                  Local server, static checks and locale generation
+docs/media/               README animation and implementation screenshots
+```
 
-## دامنهٔ تطبیق
+Edit `src/fa-copy.txt`, then run `python scripts/localize.py` with Python 3 and `lxml` to regenerate both locales. Visitors receive static translated HTML.
 
-Refero یک تصویر دسکتاپ از ابتدای صفحه دارد. نسخهٔ انگلیسیِ هیرو، لوگو، تیتر، نوار پیشنهاد، فونت و دکمهٔ خرید با همان تصویر تطبیق داده شده‌اند. نسخهٔ فارسی طبق درخواست بعدی کاربر، پینار و متن و چیدمان فارسی دارد. بخش‌های پایین صفحه و تعاملات آن‌ها از صفحهٔ رسمی در زمان پیاده‌سازی گرفته شده‌اند؛ تطبیق تاریخی این بخش‌ها با تصویر Refero قابل اثبات نیست.
+## Reference and attribution
 
-لینک‌های خرید، حساب، مشخصات و صفحات دیگر به مقصد واقعی Apple می‌روند. سایت نسخهٔ بازسازی‌شده برای مرور و بررسی طراحی است. دارایی‌ها و نشان‌های Apple متعلق به صاحبان آن‌ها هستند.
+The [Refero reference](https://styles.refero.design/style/569ba4c0-0431-44fb-92df-0dbea7f3e63d) establishes the first desktop viewport. Lower sections use the official Apple page captured during implementation; an exact historical match to unseen sections is not claimed.
 
-منابع و شواهد بررسی در `SOURCES.md` و `QA.md` ثبت شده‌اند.
+Apple imagery, video, trademarks, SF Pro fonts and native components belong to their respective owners. Pinar comes from the project owner's supplied files. This independent portfolio study is not affiliated with Apple. Commerce and account links lead to Apple's official website.
+
+[Source provenance](SOURCES.md) · [Verification details](QA.md) · [README media details](docs/media/README.md)

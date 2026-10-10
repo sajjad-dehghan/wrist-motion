@@ -1,5 +1,6 @@
 {
-  "name": "watch-se3-reference-recreation",
+  "name": "wrist-motion",
+  "description": "A bilingual Apple Watch SE 3 interface study with Persian RTL, Pinar typography and responsive product motion.",
   "version": "1.0.0",
   "private": true,
   "type": "module",
