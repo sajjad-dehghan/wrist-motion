@@ -34,6 +34,15 @@ html[lang=fa] .gallery .card,html[lang=fa] .gallery .gallery-item{direction:rtl;
 /* Keep the physical composition of photographic/video cards; localize text flow. */
 html[lang=fa] .media-gallery .media-container,html[lang=fa] .media-gallery .caption-container{direction:ltr}
 html[lang=fa] .media-gallery .caption{direction:rtl;text-align:right;line-height:1.65}
+/* Mirror only the charging accessory; the watch face and Persian copy stay intact.
+   Keep the native breakpoint offsets so the puck remains behind the watch. */
+html[lang=fa] .section-so-much-to-love .watch-charger{left:var(--charger-inline-start);right:auto}
+html[lang=fa] .section-so-much-to-love .watch-screen-container picture img{display:block;width:100%;height:100%}
+html[lang=fa] .section-so-much-to-love .watch-charger img{transform:scaleX(-1)}
+html[lang=fa].enhanced .section-so-much-to-love .enhanced-container .watch-charger{--translate-x:400px}
+@media(max-width:1068px){
+ html[lang=fa].enhanced .section-so-much-to-love .enhanced-container .watch-charger{--translate-x:280px}
+}
 @media(max-width:1200px) and (min-width:834px){.locale-nav{left:6px}.locale-switch{padding:3px 5px;font-size:10px}#globalnav .globalnav-content{padding-left:58px}}
 @media(min-width:1069px){
  html[lang=fa] .section-product-viewer .product-viewer-landing-fallback picture,

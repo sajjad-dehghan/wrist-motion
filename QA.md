@@ -1,5 +1,14 @@
 # Verification — 2026-10-10
 
+## Persian charging cable correction
+
+- Persian charging accessories are anchored using the native left offsets (144px desktop, 34px tablet, 22px mobile); only the accessory image is mirrored, keeping watch faces readable.
+- The enhanced animation starts at a positive horizontal offset (400px desktop, 280px medium), bringing the cable in from the right. Browser scrolling confirmed the desktop start at +400px and connected position at 0px.
+- Desktop inspection at 1600 × 1000 confirmed the cable begins at x=944 while the Persian copy ends at x=800, with no overlap at the connected state.
+- Inspected the static layout at 1024 × 900 and 390 × 844: cable reaches the watch from the right, below the copy. Document width equals viewport width.
+- Watch-layer images now match their picture dimensions in Persian, correcting the large intrinsic image sizes that broke alignment in the mobile fallback.
+- `npm run check` passes. Screenshots: `artifacts/battery-rtl-desktop.jpg` and `artifacts/battery-rtl-mobile.jpg`.
+
 ## Requested fine-print removal
 
 - Both generated pages omit the entire `.ac-gf-sosumi` footer section and every `#footnote-` link and its inline marker.
