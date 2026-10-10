@@ -12,7 +12,8 @@
   if (film && control) {
     const updateControl = () => {
       control.setAttribute('aria-pressed', String(film.paused));
-      control.setAttribute('aria-label', film.paused ? 'Play product animation' : 'Pause product animation');
+      const persian = document.documentElement.lang === 'fa';
+      control.setAttribute('aria-label', persian ? (film.paused ? 'پخش ویدئوی محصول' : 'توقف ویدئوی محصول') : (film.paused ? 'Play product animation' : 'Pause product animation'));
     };
     const ready = () => {
       film.currentTime = 2.8;
@@ -48,6 +49,7 @@
   }
   const normalizeLinks = parent => parent.querySelectorAll('a[href^="/"]').forEach(link => {
     const href = link.getAttribute('href');
+    if (link.hasAttribute('data-local-link')) return;
     if (!/^\/(v|ac|assets)\//.test(href)) link.href = 'https://www.apple.com' + href;
   });
   normalizeLinks(document);

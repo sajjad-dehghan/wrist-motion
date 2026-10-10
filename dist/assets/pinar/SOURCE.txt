@@ -1,0 +1,8 @@
+Pinar DS4 — local webfonts requested by the user.
+Copied 2026-10-10 from:
+C:/Users/sedwna/Desktop/ARKA/product/website/concept-v03-immersive/assets/pinar/
+That copy records its original source as the user's files in:
+D:/Projects/personal-site/public/fonts/pinar/
+
+Light: 300. Regular: 400. Medium: 500. Bold: 700 (also used for 600).
+No remote redistribution service was used to obtain these files.

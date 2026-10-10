@@ -1,0 +1,55 @@
+@font-face{font-family:Pinar;src:url('/assets/pinar/Pinar-DS4-Light.woff2') format('woff2');font-weight:300;font-style:normal;font-display:swap}
+@font-face{font-family:Pinar;src:url('/assets/pinar/Pinar-DS4-Regular.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:Pinar;src:url('/assets/pinar/Pinar-DS4-Medium.woff2') format('woff2');font-weight:500;font-style:normal;font-display:swap}
+@font-face{font-family:Pinar;src:url('/assets/pinar/Pinar-DS4-Bold.woff2') format('woff2');font-weight:600 900;font-style:normal;font-display:swap}
+.locale-nav{position:absolute;top:0;left:24px;height:44px;display:flex;align-items:center;z-index:10001}
+.locale-switch{font:500 12px/1.5 Pinar,'SF Pro Text',sans-serif;color:#424245;padding:3px 10px;border:1px solid #d2d2d7;border-radius:999px;text-decoration:none;background:#fff}
+.locale-switch:hover{background:#f5f5f7;color:#0071e3;text-decoration:none}
+html[lang=fa] body,html[lang=fa] button,html[lang=fa] input,html[lang=fa] select,html[lang=fa] textarea,
+html[lang=fa] h1,html[lang=fa] h2,html[lang=fa] h3,html[lang=fa] h4,html[lang=fa] p,
+html[lang=fa] a,html[lang=fa] li,html[lang=fa] span,html[lang=fa] label,html[lang=fa] figcaption,
+html[lang=fa] .typography-headline,html[lang=fa] .typography-headline-elevated,html[lang=fa] .typography-section-headline,
+html[lang=fa] .typography-body,html[lang=fa] .typography-card-headline,html[lang=fa] .rh-price-action{
+ font-family:Pinar,'SF Pro Icons',sans-serif!important;letter-spacing:0!important;
+}
+html[lang=fa] p{line-height:1.8}
+html[lang=fa] sup{margin-inline-start:3px}
+html[lang=fa] h2,html[lang=fa] h3,html[lang=fa] .card-headline{line-height:1.45}
+html[lang=fa] #ac-globalfooter{font-family:Pinar,sans-serif!important}
+html[lang=fa] #ac-globalfooter .ac-gf-sosumi{line-height:1.9}
+html[lang=fa] #ac-localnav .ac-ln-title{float:right;line-height:1.5}
+html[lang=fa] #ac-localnav .ac-ln-menu{float:left}
+html[lang=fa] #ac-localnav .ac-ln-menu-item{margin-left:0;margin-right:24px}
+html[lang=fa] .reference-hero .rh-title{text-align:right;line-height:1.5;font-weight:700}
+html[lang=fa] .reference-hero .rh-eyebrow{background-position:center right}
+html[lang=fa] .reference-hero .rh-price-action{padding:10px 24px 10px 10px}
+html[lang=fa] .reference-hero .rh-pause{right:auto;left:40px}
+html[lang=fa] .icon::before,html[lang=fa] .icon::after{font-family:'SF Pro Icons'!important}
+html[lang=fa] .ric-modal-close-icon svg{left:0!important;right:auto!important;transform:none!important}
+/* Header category names are SVG lettering in the English source. */
+html[lang=fa] #globalnav .globalnav-item-menu .globalnav-image-regular{display:none}
+html[lang=fa] #globalnav .globalnav-item-menu .globalnav-link-text-container{position:static!important;clip:auto!important;clip-path:none!important;width:auto!important;height:auto!important;overflow:visible!important;font-size:12px;line-height:44px}
+html[lang=fa] #globalnav .globalnav-item-menu .globalnav-link-text{position:static!important;clip:auto!important;clip-path:none!important;width:auto!important;height:auto!important;overflow:visible!important}
+html[lang=fa] .gallery .card,html[lang=fa] .gallery .gallery-item{direction:rtl;text-align:right}
+/* Keep the physical composition of photographic/video cards; localize text flow. */
+html[lang=fa] .media-gallery .media-container,html[lang=fa] .media-gallery .caption-container{direction:ltr}
+html[lang=fa] .media-gallery .caption{direction:rtl;text-align:right;line-height:1.65}
+@media(max-width:1200px) and (min-width:834px){.locale-nav{left:6px}.locale-switch{padding:3px 5px;font-size:10px}#globalnav .globalnav-content{padding-left:58px}}
+@media(min-width:1069px){
+ html[lang=fa] .section-product-viewer .product-viewer-landing-fallback picture,
+ html[lang=fa] .section-product-viewer .product-viewer-media picture,
+ html[lang=fa] .section-product-viewer .gallery-image{translate:-25% 0}
+}
+@media(max-width:833px){
+ .locale-nav{height:48px;left:50%;transform:translateX(-50%)}
+ html[lang=fa] #globalnav .globalnav-item-menu .globalnav-link-text-container{font-size:28px;line-height:1.5}
+ html[lang=fa] #globalnav .globalnav-item-menu .globalnav-image-compact{display:none}
+ html[lang=fa] #ac-localnav .ac-ln-menu-item{margin-right:0}
+}
+@media(max-width:734px){
+ html[lang=fa] .reference-hero .rh-title{font-size:36px;line-height:1.55}
+ html[lang=fa] .reference-hero .rh-price-action{padding:18px 24px}
+ html[lang=fa] .reference-hero .rh-pause{left:24px}
+ html[lang=fa] .typography-headline-elevated{font-size:40px;line-height:1.5}
+ html[lang=fa] .typography-headline{line-height:1.5}
+}

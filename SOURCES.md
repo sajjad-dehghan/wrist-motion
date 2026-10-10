@@ -8,3 +8,8 @@
 - Fonts: https://www.apple.com/wss/fonts?families=SF%20Pro,v3%7CSF%20Pro%20Icons,v3
 
 The old five-watch hero differs from Apple's current three-watch hero. The custom hero uses the original legacy film and logo; it is not the Refero screenshot used as a page background. Media, CSS, fonts and component scripts are packaged locally. Pricing labels are static source values, and commerce links retain the official Apple origin. Analytics and pricing-service scripts are omitted.
+# Persian language addition
+
+Persian translations were authored for this reconstruction. `src/fa-copy.txt` preserves their editable copy alongside the original English source and inventory. Medical and purchasing qualifications remain attached to the corresponding source footnotes.
+
+Pinar DS4 comes from the user's existing local font files, verified on 2026-10-10. Four WOFF2 weights and their provenance are in `dist/assets/pinar/`. English continues to use the locally retained SF Pro fonts.

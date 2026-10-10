@@ -19,7 +19,11 @@ for (const resource of references) {
 assert.deepEqual(missing, [], 'All HTML/CSS resources must exist locally.');
 const html = await fs.readFile(path.join(root, 'index.html'), 'utf8');
 assert.equal((html.match(/<h1\b/g) || []).length, 1, 'Exactly one primary heading.');
-assert.match(html, /data-localnav-trigger-anchor=\.rh-price-action/);
+assert.ok(/data-localnav-trigger-anchor=["']?\.rh-price-action/.test(html), 'Native localnav trigger must remain present.');
+assert.ok(/lang="fa"/.test(html) && /dir="rtl"/.test(html), 'Persian must be the static default.');
+const english = await fs.readFile(path.join(root, 'en/index.html'), 'utf8');
+assert.ok(/lang="en-US"/.test(english) && /dir="ltr"/.test(english), 'English route must retain LTR.');
+for (const weight of ['Light','Regular','Medium','Bold']) await fs.access(path.join(root,'assets/pinar',`Pinar-DS4-${weight}.woff2`));
 assert.doesNotMatch(html, /Starting at\s*\$229|data-toggle="acmi"/);
 for (const tag of html.match(/<video\b[^>]*>/g) || []) {
   const base = tag.match(/data-inline-media-basepath="([^"]+)"/)?.[1];

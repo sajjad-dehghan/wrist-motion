@@ -1,5 +1,21 @@
 # Verification — 2026-10-10
 
+## Persian localization
+
+- `/` serves static Persian HTML with `lang="fa"` and `dir="rtl"`; `/en/` serves English with `lang="en-US"` and `dir="ltr"`.
+- 618 source strings have explicit translations or preserved service/domain names, including marketing copy, technical descriptions, legal conditions, menus, image descriptions and accessibility labels. Native color-specific accessibility maps are localized too.
+- Pinar DS4 is self-hosted in Light, Regular, Medium and Bold. Browser checks confirmed the actual computed Pinar font and loaded glyphs.
+- Inspected widths: 320 × 780, 390 × 844, 1024 × 900 and 1600 × 1000. The document width matches the viewport at each width.
+- The mobile language selector sits between navigation groups without covering Search or Bag. Persian mobile menu labels and the dynamic Close label render correctly.
+- Switched Persian → English → Persian through the visible language control; English restores SF Pro and LTR. Search parameters and section fragments are preserved.
+- Highlights selection tested with Sleep Score and Health app; both selected state and visible panel position were verified. Native RTL scrolling is retained. Media composition stays in its original physical direction while captions use Persian text flow.
+- Product viewer: Health sensors opens/closes in Persian; Finishes switches to Midnight with matching Persian text and checked radio. On desktop, the image composition is shifted left to leave the right-side controls clear.
+- Trade In information dialog opens with Persian heading, body, link and Close label. The RTL close SVG offset is corrected.
+- All embedded native scripts match the retained English source. `npm run check` passes for local resources, responsive media, both locale routes and four Pinar font weights.
+- Browser screenshots: `artifacts/fa-desktop.png` and `artifacts/fa-mobile.png`.
+
+## Original English reconstruction
+
 - Reference viewport: 1600 × 1000. Logo and headline aligned at x=170; hero ends at the reference viewport boundary. Original five-watch video used, with a stable reference frame at 2.8 seconds.
 - Responsive inspection: 390 × 844 and 1024 × 900. No horizontal page overflow; mobile purchase bar and tablet content render correctly.
 - SF Pro fonts loaded from local files.
