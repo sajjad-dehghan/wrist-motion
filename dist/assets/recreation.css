@@ -1,0 +1,61 @@
+/* Reference-specific hero. The rest of the page retains the source geometry. */
+.section-welcome.reference-hero {
+  --headline-gradient:linear-gradient(110deg,#169b91 0%,#139ccc 48%,#566cde 100%);
+  position:relative;z-index:1;display:flex;flex-direction:column;
+  height:calc(100svh - 92px);min-height:760px;max-height:none;margin-top:0;
+  padding:0;overflow:hidden;background:#fff;box-sizing:border-box;
+}
+.reference-hero .rh-stage {position:relative;display:flex;flex:1;min-height:0;align-items:center;justify-content:center;padding:60px 40px 0;box-sizing:border-box;}
+.reference-hero .rh-video {display:block;width:100%;max-width:1800px;min-width:1400px;height:auto;object-fit:contain;}
+.reference-hero .rh-pause {position:absolute;right:max(6.25vw,24px);top:60px;width:36px;height:36px;padding:0;border:0;border-radius:50%;display:grid;place-items:center;background:#e8e8ed;color:#6e6e73;cursor:pointer;z-index:2;}
+.reference-hero .rh-pause svg {width:18px;height:18px;fill:currentColor;}
+.reference-hero .rh-pause .rh-play-icon {display:none;}
+.reference-hero .rh-pause[aria-pressed="true"] .rh-play-icon {display:block;}
+.reference-hero .rh-pause[aria-pressed="true"] .rh-pause-icon {display:none;}
+.reference-hero .rh-marquee {width:calc(100% - 12.5vw);max-width:1260px;margin:0 auto;display:flex;justify-content:space-between;align-items:flex-end;padding:0 0 64px;flex-shrink:0;box-sizing:border-box;}
+.reference-hero .rh-title {margin:0;color:#1d1d1f;font-family:'SF Pro Display','Helvetica Neue',sans-serif;font-size:64px;line-height:1.0625;font-weight:600;letter-spacing:-.015em;text-align:left;}
+.reference-hero .rh-gradient {background:var(--headline-gradient);background-clip:text;-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
+.reference-hero .rh-eyebrow {display:block;width:200px;height:38px;margin:0 0 14px;background:url('/v/apple-watch-se-3/d/images/overview/welcome/hero_logo__cfmh8814cwmu_large.png') center left / contain no-repeat;}
+.reference-hero .rh-price-action {position:relative;display:flex;align-items:center;gap:30px;padding:10px 10px 10px 24px;margin-bottom:2px;border-radius:999px;background:rgba(232,232,237,.72);backdrop-filter:blur(20px);font:600 17px/1.2353 'SF Pro Text','Helvetica Neue',sans-serif;color:#1d1d1f;}
+.reference-hero .rh-price-action .button {margin:0;display:flex;align-items:center;justify-content:center;font-size:17px;min-height:36px;padding:8px 17px;box-sizing:border-box;}
+.reference-hero .rh-price {white-space:nowrap;}
+:focus-visible{outline:3px solid #0071e3;outline-offset:4px;}
+@media(min-width:1600px){.reference-hero .rh-marquee{max-width:1260px;}}
+@media(max-width:1068px){
+ .section-welcome.reference-hero{min-height:600px;}
+ .reference-hero .rh-stage{padding-top:48px;}
+ .reference-hero .rh-video{max-width:1400px;min-width:1400px;}
+ .reference-hero .rh-title{font-size:48px;line-height:1.08333;}
+ .reference-hero .rh-eyebrow{width:168px;height:30px;}
+ .reference-hero .rh-marquee{padding-bottom:48px;}
+ .reference-hero .rh-price-action{gap:16px;font-size:14px;padding-left:18px;}
+}
+@media(max-width:734px){
+ .section-welcome.reference-hero{height:calc(100svh - 112px);min-height:560px;max-height:800px;}
+ .reference-hero .rh-stage{padding:24px 0 0;}
+ .reference-hero .rh-video{min-width:760px;max-width:760px;width:760px;}
+ .reference-hero .rh-pause{width:30px;height:30px;right:24px;top:30px;}
+ .reference-hero .rh-marquee{width:calc(100% - 48px);padding-bottom:0;display:block;}
+ .reference-hero .rh-title{font-size:40px;line-height:1.1;letter-spacing:-.012em;}
+ .reference-hero .rh-eyebrow{width:168px;height:30px;margin-bottom:10px;}
+ .reference-hero .rh-price-action{margin:26px -24px 0;border-radius:0;padding:18px 24px;justify-content:space-between;gap:24px;font-size:14px;}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto;}.reference-hero .rh-video{animation:none;}}
+
+/* Override enhanced-layout rules which the current native overview adds. */
+html { scrollbar-width:none; } html::-webkit-scrollbar {display:none;}
+html .page-overview .section-welcome.reference-hero {margin-top:0;padding:0;height:calc(100svh - 104px);}
+html .reference-hero .rh-stage {overflow:hidden;}
+html .reference-hero .rh-eyebrow {width:198px;height:30px;margin-bottom:13px;background-image:url('/assets/hero-logo-large.png');}
+html .reference-hero .rh-price-action {gap:34px;margin-bottom:3px;font-weight:400;}
+html .reference-hero .rh-price {font-weight:600;}
+html .reference-hero .rh-video {flex-shrink:0;}
+@media(max-width:1068px){html .reference-hero .rh-eyebrow{width:170px;height:26px;background-image:url('/assets/hero-logo-medium.png');}}
+@media(max-width:734px){html .page-overview .section-welcome.reference-hero{height:calc(100svh - 124px);}html .reference-hero .rh-eyebrow{width:142px;height:22px;background-image:url('/assets/hero-logo-small.png');}}
+
+@media(min-width:1069px){html .reference-hero .rh-marquee{padding-bottom:54px;}html .reference-hero .rh-video{transform:translateY(-21px);}html .reference-hero .rh-pause{right:40px;top:50px;}}
+html .reference-hero .rh-title{letter-spacing:-.009em;}
+html .reference-hero{--headline-gradient:linear-gradient(110deg,oklab(65.2% -0.1245 0.0216),oklab(66.464% -0.065 -0.174) 25%,oklab(59.25% 0.0439 -0.2239) 75%,oklab(62.947% 0.2406 -0.15));}
+
+html .page-overview .section-welcome.reference-hero{padding:0!important;margin-top:0!important;}
+@media(max-width:734px){html .page-overview .section-welcome.reference-hero{height:calc(100svh - 120px);}}
