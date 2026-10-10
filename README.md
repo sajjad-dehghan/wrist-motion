@@ -108,11 +108,3 @@ docs/media/               README animation and implementation screenshots
 ```
 
 Edit `src/fa-copy.txt`, then run `python scripts/localize.py` with Python 3 and `lxml` to regenerate both locales. Visitors receive static translated HTML.
-
-## Reference and attribution
-
-The [Refero reference](https://styles.refero.design/style/569ba4c0-0431-44fb-92df-0dbea7f3e63d) establishes the first desktop viewport. Lower sections use the official Apple page captured during implementation; an exact historical match to unseen sections is not claimed.
-
-Apple imagery, video, trademarks, SF Pro fonts and native components belong to their respective owners. Pinar comes from the project owner's supplied files. This independent portfolio study is not affiliated with Apple. Commerce and account links lead to Apple's official website.
-
-[Source provenance](SOURCES.md) · [Verification details](QA.md) · [README media details](docs/media/README.md)
