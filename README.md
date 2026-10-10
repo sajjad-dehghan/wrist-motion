@@ -1,9 +1,9 @@
 <p align="center">
-  <img src="docs/media/watches-in-motion.gif" width="1000" alt="Five Apple Watch SE 3 models rotating into a colorful product composition. Animated preview." />
+  <img src="docs/media/wordmark.svg" width="1000" alt="WristMotion — a watch experience in two directions" />
 </p>
 
 <p align="center">
-  <img src="docs/media/wordmark.svg" width="1000" alt="WristMotion — a watch experience in two directions" />
+  <img src="docs/media/watches-in-motion.gif" width="1000" alt="Five Apple Watch SE 3 models rotating into a colorful product composition. Animated preview." />
 </p>
 
 <p align="center">

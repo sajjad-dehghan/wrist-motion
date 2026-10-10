@@ -1,5 +1,5 @@
-<p align="center"><img src="media/watches-in-motion.gif" width="1000" alt="انیمیشن چرخش پنج اپل واچ SE ۳ با بندهای رنگی" /></p>
 <p align="center"><img src="media/wordmark.svg" width="1000" alt="WristMotion" /></p>
+<p align="center"><img src="media/watches-in-motion.gif" width="1000" alt="انیمیشن چرخش پنج اپل واچ SE ۳ با بندهای رنگی" /></p>
 
 <div dir="rtl">
 
