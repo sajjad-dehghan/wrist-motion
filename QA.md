@@ -1,5 +1,13 @@
 # Verification — 2026-10-10
 
+## Requested fine-print removal
+
+- Both generated pages omit the entire `.ac-gf-sosumi` footer section and every `#footnote-` link and its inline marker.
+- Removal runs after localization so joined text nodes keep their Persian translations.
+- Inspected the rendered Persian desktop footer at 1600 × 1000: the normal directory, shopping links and copyright remain; no fine-print section is present. Pinar remains the computed footer font.
+- DOM checks found zero fine-print sections and zero footnote links; document widths match 1600 and 390 pixel viewports. Both generated HTML files passed the same removal checks and retained the normal footer.
+- `npm run check` passes. Updated desktop evidence: `artifacts/footer-clean.jpg`.
+
 ## Persian localization
 
 - `/` serves static Persian HTML with `lang="fa"` and `dir="rtl"`; `/en/` serves English with `lang="en-US"` and `dir="ltr"`.

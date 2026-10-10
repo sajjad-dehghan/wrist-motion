@@ -67,6 +67,13 @@ for language in ['en', 'fa']:
             meta.set('content', description)
         for meta in doc.xpath('//meta[@property="og:locale"]'): meta.set('content', 'fa_IR')
         for meta in doc.xpath('//meta[@property="og:title" or @name="twitter:title"]'): meta.set('content', 'اپل واچ SE ۳')
+    # Remove fine print after translation: drop_tree merges text nodes, which
+    # must keep their original inventory boundaries until localized.
+    for section in doc.xpath('//*[contains(concat(" ", normalize-space(@class), " "), " ac-gf-sosumi ")]'):
+        section.drop_tree()
+    for link in doc.xpath('//a[starts-with(@href, "#footnote-")]'):
+        wrappers = link.xpath('ancestor::*[contains(concat(" ", normalize-space(@class), " "), " footnote ")]')
+        (wrappers[-1] if wrappers else link).drop_tree()
     head = doc.find('head')
     head.append(html.Element('link', rel='stylesheet', href='/assets/localization.css'))
     for lang, href in [('fa','/'), ('en','/en/'), ('x-default','/')]:
